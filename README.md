@@ -6,11 +6,11 @@ This repo has my note, walkthroughs, and solutions as i work through API securit
 
 ## Lab List
 
-| # | Lab Title | Vulnerability Type | Status |
+| # | Lab Title | Vulnerability Type | 
 | :-: | :--- | :--- | :---: |
-| **1** | [Exploiting an API Endpoint Using Documentation](./labs/01-api-documentation-exploitation/README.md) | Exposed API Docs | Completed |
-| **2** | [Finding and Exploiting an Unused API Endpoint](./labs/02-unused-api-endpoint/README.md) | Hidden Endpoints | Completed |
-| **3** | [Exploiting a Mass Assignment Vulnerability](./labs/03-mass-assignment-vulnerability/README.md) | Mass Assignment | Completed |
+| **1** | [Exploiting an API Endpoint Using Documentation](./labs/01-api-documentation-exploitation/README.md) | Exposed API Docs | 
+| **2** | [Finding and Exploiting an Unused API Endpoint](./labs/02-unused-api-endpoint/README.md) | Hidden Endpoints | 
+| **3** | [Exploiting a Mass Assignment Vulnerability](./labs/03-mass-assignment-vulnerability/README.md) | Mass Assignment | 
 
 ---
 
