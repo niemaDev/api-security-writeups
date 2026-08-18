@@ -36,6 +36,8 @@ then Open Burp Suite, ensure Intercept is on, and browse to any product page (su
 
 5. Go to the **Repeater** tab and change the HTTP method from `GET` to `OPTIONS`, then send the request. you can see the response specifies which methods are allowed.
    ![Options method response](./assets/option_price.jpg)
+
+   change the HTTP method from `GET` to `POST`
    ![Post price check](./assets/post_price.jpg)
 
 6. Change the method from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
@@ -44,34 +46,31 @@ then Open Burp Suite, ensure Intercept is on, and browse to any product page (su
 7. when receive an Unauthorized response,  copy authentication details from your logged-in browser session into the Repeater request.
 ![Not allowed view](./assets/not_allowed.jpg)
     
-    ![Not allowed view 2](./assets/not_allowed2.jpg)
+ ![Not allowed view 2](./assets/not_allowed2.jpg)
 
-8. Send the request. Notice that this causes an error due to an incorrect `Content-Type`.
+8. Send the request. Notice that this causes an error due to an incorrect `Content-Type`
+
+    ![Patch price payload](./assets/patch_price.jpg)
+
+
+so we change it to `application/json`
 
  ![Error details](./assets/app_j.jpg)
 
-
- ![Additional error info](./assets/appj.jpg)
-
-
-   
-
-9. Add a `Content-Type` header and set its value to `application/json`.
+9. Add an `{"price":"0"}` JSON object as the request body, then send the request. look at the error it mention that the body request has parameter error
 
  ![Content-Type error](./assets/app_json.jpg)
 
+10.   Remove the `" "` on  price number `0`
  ![Supported content type](./assets/supported.jpg)
 
-10. Add an empty JSON object `{}` as the request body, then send the request. Notice that this causes an error because the `price` parameter is missing.
-    ![Zero quote error](./assets/0qoute.jpg)
+ ![Zero quote error](./assets/0qoute.jpg)
+  
 
-11. Add a `price` parameter with a value of `0` to the JSON object (`{"price":0}`) and send the request.
-    ![Patch price payload](./assets/patch_price.jpg)
-
-12. In Burp's browser, reload the leather jacket product page. Notice that the price of the leather jacket is now `$0.00`.
+11. Before chaning the price api request the price of leather jacket was ``$1337.00`` 
     ![Jacket price zero](./assets/jacket.jpg)
 
-13. Add the leather jacket to your basket, go to your basket, and click **Place order** to solve the lab.
+12.Reload the leather jacket product page. See that the price of the leather jacket is now `$0.00`. Add the leather jacket to your basket, go to your basket, and click **Place order** to solve the lab.
     ![Lab solved](./assets/solve.jpg)
 
 ---
