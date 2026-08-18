@@ -25,19 +25,18 @@ By using Burp Suite's built-in browser, log in to your PortSwigger account and b
  ![Access the lab](./assets/login.jpg)
 then Open Burp Suite, ensure Intercept is on, and browse to any product page (such as the Lightweight "l33t" Leather Jacket).
 ![Access the lab](./assets/interceptor.jpg)
-3. Click on the product page.
+2. Click on the product page.
    ![Product page](./assets/pro1.jpg)
 
-4. In Burp, go to the **Proxy > HTTP history** tab and locate the `/api/products/1/price` request.
+3. In Burp, go to the **Proxy > HTTP history** tab and locate the `/api/products/1/price` request.
    ![HTTP history](./assets/http_history.jpg)
 
-5. Right-click the API request and select **Send to Repeater**.
+4. Right-click the API request and select **Send to Repeater**.
    ![Send to Repeater](./assets/get_price.jpg)
 
 5. Go to the **Repeater** tab and change the HTTP method from `GET` to `OPTIONS`, then send the request. you can see the response specifies which methods are allowed.
    ![Options method response](./assets/option_price.jpg)
    ![Post price check](./assets/post_price.jpg)
-   ![Allowed methods](./assets/allowed.jpg)
 
 6. Change the method from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
    ![Unauthorized patch response](./assets/patch_price.jpg)
