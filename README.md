@@ -1,6 +1,6 @@
 # PortSwigger Web Security Academy Labs: API Testing 
 
-This repo has my note, walkthroughs, and solutions as i work through API security labs on the PortSwigger Web Security Academy.
+This repo has my note, step, and solutions as i work through API security labs on the PortSwigger Web Security Academy.
 
 ---
 
@@ -16,7 +16,7 @@ This repo has my note, walkthroughs, and solutions as i work through API securit
 
 ## Tools Used
 * **Burp Suite** for intercepting and modifying HTTP traffic
-* **Browser / Repeater** for testing requests and payloads
+* **Browser / Repeater** for testing requests 
 
 ---
 *Created by Nimet — 5th Round Cyber Talent Summer Camp Student.*
