@@ -23,7 +23,7 @@ By using Burp Suite's built-in browser, log in to your PortSwigger account and b
    ![Access the lab](./assets/shop.jpg)
 
 2. Click on the product page.
-   ![Product page](./assets/product.jpg)
+   ![Product page](./assets/pro1.jpg)
 
 3. In Burp, go to the **Proxy > HTTP history** tab and locate the `/api/products/1/price` request.
    ![HTTP history](./assets/http_history.jpg)
