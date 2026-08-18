@@ -34,16 +34,11 @@ then Open Burp Suite, ensure Intercept is on, and browse to any product page (su
 5. Right-click the API request and select **Send to Repeater**.
    ![Send to Repeater](./assets/get_price.jpg)
 
-<<<<<<< HEAD
 5. Go to the **Repeater** tab and change the HTTP method from `GET` to `OPTIONS`, then send the request. you can see the response specifies which methods are allowed.
-=======
-6. Go to the **Repeater** tab and change the HTTP method for the API request from `GET` to `OPTIONS`, then send the request. Notice that the response specifies which methods are allowed.
->>>>>>> 5fd4a5a2a01e03df448b451133f48b4dc49e79ff
    ![Options method response](./assets/option_price.jpg)
    ![Post price check](./assets/post_price.jpg)
    ![Allowed methods](./assets/allowed.jpg)
 
-<<<<<<< HEAD
 6. Change the method from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
    ![Unauthorized patch response](./assets/patch_price.jpg)
 
@@ -78,44 +73,6 @@ then Open Burp Suite, ensure Intercept is on, and browse to any product page (su
     ![Jacket price zero](./assets/jacket.jpg)
 
 13. Add the leather jacket to your basket, go to your basket, and click **Place order** to solve the lab.
-=======
-8. Change the method from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
-   ![Unauthorized patch response](./assets/patch_price.jpg)
-
-9. Log in to the application using the default credentials `wiener:peter`.
-   ![Login](./assets/login.jpg)
-   ![Interceptor view](./assets/interceptor.jpg)
-
-10. Click on the `Lightweight "l33t" Leather Jacket` product.
-   ![Select leather jacket](./assets/pro1.jpg)
-
-11. In Proxy > HTTP history, right-click the `/api/products/1/price` request for the leather jacket and select **Send to Repeater**.
-   ![HTTP history for jacket](./assets/http_history.jpg)
-
-12. In the **Repeater** tab, change the method from `GET` to `PATCH`.
-    ![Patch method](./assets/patch_price.jpg)
-
-13. Send the request. Notice that this causes an error due to an incorrect `Content-Type`.
-    ![Content-Type error](./assets/app_json.jpg)
-    ![Error details](./assets/app_j.jpg)
-    ![Additional error info](./assets/appj.jpg)
-    ![Not allowed view](./assets/not_allowed.jpg)
-    ![Not allowed view 2](./assets/not_allowed2.jpg)
-
-14. Add a `Content-Type` header and set its value to `application/json`.
-    ![Supported content type](./assets/supported.jpg)
-
-15. Add an empty JSON object `{}` as the request body, then send the request. Notice that this causes an error because the `price` parameter is missing.
-    ![Zero quote error](./assets/0qoute.jpg)
-
-16. Add a `price` parameter with a value of `0` to the JSON object (`{"price":0}`) and send the request.
-    ![Patch price payload](./assets/patch_price.jpg)
-
-17. In Burp's browser, reload the leather jacket product page. Notice that the price of the leather jacket is now `$0.00`.
-    ![Jacket price zero](./assets/jacket.jpg)
-
-18. Add the leather jacket to your basket, go to your basket, and click **Place order** to solve the lab.
->>>>>>> 5fd4a5a2a01e03df448b451133f48b4dc49e79ff
     ![Lab solved](./assets/solve.jpg)
 
 ---
