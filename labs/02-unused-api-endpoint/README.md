@@ -22,7 +22,9 @@ By using Burp Suite's built-in browser, log in to your PortSwigger account and b
 1. Go to Burp's browser and click the **Access the lab** button.   
    ![Access the lab](./assets/shop.jpg)
    and log in using the provided credentials: `wiener:peter`.
- ![Access the lab](./assets/shop.jpg)
+ ![Access the lab](./assets/login.jpg)
+then Open Burp Suite, ensure Intercept is on, and browse to any product page (such as the Lightweight "l33t" Leather Jacket).
+![Access the lab](./assets/interceptor.jpg)
 3. Click on the product page.
    ![Product page](./assets/pro1.jpg)
 
@@ -37,42 +39,42 @@ By using Burp Suite's built-in browser, log in to your PortSwigger account and b
    ![Post price check](./assets/post_price.jpg)
    ![Allowed methods](./assets/allowed.jpg)
 
-7. Change the method for the API request from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
+8. Change the method from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
    ![Unauthorized patch response](./assets/patch_price.jpg)
 
-8. Log in to the application using the default credentials `wiener:peter`.
+9. Log in to the application using the default credentials `wiener:peter`.
    ![Login](./assets/login.jpg)
    ![Interceptor view](./assets/interceptor.jpg)
 
-9. Click on the `Lightweight "l33t" Leather Jacket` product.
+10. Click on the `Lightweight "l33t" Leather Jacket` product.
    ![Select leather jacket](./assets/pro1.jpg)
 
-10. In Proxy > HTTP history, right-click the `/api/products/1/price` request for the leather jacket and select **Send to Repeater**.
+11. In Proxy > HTTP history, right-click the `/api/products/1/price` request for the leather jacket and select **Send to Repeater**.
    ![HTTP history for jacket](./assets/http_history.jpg)
 
-11. In the **Repeater** tab, change the method from `GET` to `PATCH`.
+12. In the **Repeater** tab, change the method from `GET` to `PATCH`.
     ![Patch method](./assets/patch_price.jpg)
 
-12. Send the request. Notice that this causes an error due to an incorrect `Content-Type`.
+13. Send the request. Notice that this causes an error due to an incorrect `Content-Type`.
     ![Content-Type error](./assets/app_json.jpg)
     ![Error details](./assets/app_j.jpg)
     ![Additional error info](./assets/appj.jpg)
     ![Not allowed view](./assets/not_allowed.jpg)
     ![Not allowed view 2](./assets/not_allowed2.jpg)
 
-13. Add a `Content-Type` header and set its value to `application/json`.
+14. Add a `Content-Type` header and set its value to `application/json`.
     ![Supported content type](./assets/supported.jpg)
 
-14. Add an empty JSON object `{}` as the request body, then send the request. Notice that this causes an error because the `price` parameter is missing.
+15. Add an empty JSON object `{}` as the request body, then send the request. Notice that this causes an error because the `price` parameter is missing.
     ![Zero quote error](./assets/0qoute.jpg)
 
-15. Add a `price` parameter with a value of `0` to the JSON object (`{"price":0}`) and send the request.
+16. Add a `price` parameter with a value of `0` to the JSON object (`{"price":0}`) and send the request.
     ![Patch price payload](./assets/patch_price.jpg)
 
-16. In Burp's browser, reload the leather jacket product page. Notice that the price of the leather jacket is now `$0.00`.
+17. In Burp's browser, reload the leather jacket product page. Notice that the price of the leather jacket is now `$0.00`.
     ![Jacket price zero](./assets/jacket.jpg)
 
-17. Add the leather jacket to your basket, go to your basket, and click **Place order** to solve the lab.
+18. Add the leather jacket to your basket, go to your basket, and click **Place order** to solve the lab.
     ![Lab solved](./assets/solve.jpg)
 
 ---
