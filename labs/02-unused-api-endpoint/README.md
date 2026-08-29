@@ -1,6 +1,6 @@
 # Lab 2: Finding and Exploiting an Unused API Endpoint
 
-- **Goal:** Exploit a hidden API endpoint to change the price of the **Lightweight "l33t" Leather Jacket** to $0.00, add it to your basket, and place the order.
+- **Goal:** Exploit a hidden API endpoint to change the price of the ** Leather Jacket** to $0.00, add it to your basket, and place the order.
 - **Provided Credentials:** `wiener:peter`
 
 ---
@@ -13,11 +13,11 @@ When opening the lab inside Kali Linux, the built-in burp browser kept loading f
 
 ![Launch Burp Suite by using terminal](./assets/sandbox.jpg)
 
-To start working on the lab first open burp Suite's built-in browser and then log in to your PortSwigger account and browse the [PortSwigger API Testing Labs page](https://portswigger.net/web-security/api-testing).
+first open burp Suite's built-in browser and then log in to your PortSwigger account and browse the [PortSwigger API Testing Labs page](https://portswigger.net/web-security/api-testing).
 
 ---
 
-## Step-by-Step Walkthrough
+## Steps
 
 1. Go to Burp's browser and click the **Access the lab** button.   
    ![Access the lab](./assets/shop.jpg)
