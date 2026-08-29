@@ -34,13 +34,13 @@ then Open Burp Suite, ensure Intercept is on, and browse to any product page (su
 4. Right-click the API request and select **Send to Repeater**.
    ![Send to Repeater](./assets/get_price.jpg)
 
-5. Go to the **Repeater** tab and change the HTTP method from `GET` to `OPTIONS`, then send the request. you can see the response specifies which methods are allowed.
+5. click **Repeater** tab and adjust the HTTP method from `GET` to `OPTIONS`, then send the request. you can see the response specifies which methods are allowed.
    ![Options method response](./assets/option_price.jpg)
 
    change the HTTP method from `GET` to `POST`
    ![Post price check](./assets/post_price.jpg)
 
-6. Change the method from `GET` to `PATCH`, then send the request. Notice that you receive an unauthorized message, indicating you need to be authenticated.
+6. modify the method from `GET` to `PATCH`, then send the request. Observe that you receive an unauthorized message, showing you need to be authenticated.
    ![Unauthorized patch response](./assets/patch_price.jpg)
 
 7. when receive an Unauthorized response,  copy authentication details from your logged-in browser session into the Repeater request.
